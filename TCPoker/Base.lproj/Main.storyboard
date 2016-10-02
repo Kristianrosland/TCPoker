@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="b3b-Vr-uhy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--GameScreen-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="GameScreen" id="BYZ-38-t0r" customClass="GameScreenVC" customModule="TCPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="189" y="265"/>
+        </scene>
+        <!--LobbyScreen-->
+        <scene sceneID="wbT-l2-Amr">
+            <objects>
+                <viewController title="LobbyScreen" id="4gq-lo-2UA" customClass="LobbyScreenVC" customModule="TCPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7q-T8-7gU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zsc-cK-5qJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w1q-wg-oav">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="lobbyToGameScreen" id="ZTw-Ut-N1h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWM-Np-tsw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="265"/>
+        </scene>
+        <!--MainScreen-->
+        <scene sceneID="hMw-KD-9XF">
+            <objects>
+                <viewController title="MainScreen" id="b3b-Vr-uhy" customClass="MainScreenVC" customModule="TCPoker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWz-tM-EdS"/>
+                        <viewControllerLayoutGuide type="bottom" id="s4E-zv-vbS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ray-wE-z84">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="7zM-6q-bWj" userLabel="background">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="IP-address.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Src-mQ-1DO" userLabel="IPTextfield">
+                                <rect key="frame" x="225" y="175" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="2Uh-Hm-nB1"/>
+                                    <constraint firstAttribute="width" constant="150" id="e7w-mD-yto"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="go"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eqa-eP-bt1" userLabel="NameTextfield">
+                                <rect key="frame" x="225" y="145" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="311-w9-PAm"/>
+                                    <constraint firstAttribute="height" constant="30" id="jd8-eH-HX2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Texas Hold'em" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02q-SG-GNL" userLabel="InfoLabel">
+                                <rect key="frame" x="200" y="95" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cyq-Ms-K2W"/>
+                                    <constraint firstAttribute="width" constant="200" id="Ja6-Tb-cxc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trm-7b-kQd" userLabel="EnterButton">
+                                <rect key="frame" x="225" y="210" width="150" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="eca-dD-rle"/>
+                                    <constraint firstAttribute="height" constant="30" id="lBl-2u-5hv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <state key="normal" title="Let's play!">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="enterButtonClicked:" destination="b3b-Vr-uhy" eventType="touchUpInside" id="ifh-GA-M3T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Src-mQ-1DO" firstAttribute="centerX" secondItem="ray-wE-z84" secondAttribute="centerX" id="CdZ-Lh-5F9"/>
+                            <constraint firstItem="trm-7b-kQd" firstAttribute="centerX" secondItem="ray-wE-z84" secondAttribute="centerX" id="JHI-wI-Nqg"/>
+                            <constraint firstItem="eqa-eP-bt1" firstAttribute="top" secondItem="02q-SG-GNL" secondAttribute="bottom" constant="10" id="L7Y-Li-hIa"/>
+                            <constraint firstItem="Src-mQ-1DO" firstAttribute="top" secondItem="eqa-eP-bt1" secondAttribute="bottom" id="Loq-cO-oRh"/>
+                            <constraint firstItem="eqa-eP-bt1" firstAttribute="centerX" secondItem="ray-wE-z84" secondAttribute="centerX" id="S50-58-367"/>
+                            <constraint firstItem="02q-SG-GNL" firstAttribute="centerX" secondItem="ray-wE-z84" secondAttribute="centerX" id="TjZ-c6-oSq"/>
+                            <constraint firstAttribute="bottom" secondItem="7zM-6q-bWj" secondAttribute="bottom" id="UvE-0d-hVq"/>
+                            <constraint firstItem="02q-SG-GNL" firstAttribute="top" secondItem="MWz-tM-EdS" secondAttribute="bottom" constant="75" id="a6j-Gm-AIV"/>
+                            <constraint firstItem="7zM-6q-bWj" firstAttribute="leading" secondItem="ray-wE-z84" secondAttribute="leading" id="edd-6G-Pvq"/>
+                            <constraint firstItem="7zM-6q-bWj" firstAttribute="top" secondItem="ray-wE-z84" secondAttribute="top" id="nzL-VC-R9L"/>
+                            <constraint firstAttribute="trailing" secondItem="7zM-6q-bWj" secondAttribute="trailing" id="uud-xy-dpR"/>
+                            <constraint firstItem="trm-7b-kQd" firstAttribute="top" secondItem="Src-mQ-1DO" secondAttribute="bottom" constant="5" id="wQe-3E-s0G"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ipAddressTF" destination="Src-mQ-1DO" id="c3a-qK-ygW"/>
+                        <outlet property="usernameTF" destination="eqa-eP-bt1" id="yU4-BY-dIU"/>
+                        <segue destination="4gq-lo-2UA" kind="show" identifier="mainToLobbySegue" id="8ur-Fb-mS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p1r-vc-6Q5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1663" y="265"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="table" width="640" height="360"/>
+    </resources>
+</document>
